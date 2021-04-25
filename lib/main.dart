@@ -30,6 +30,31 @@ class _HomeState extends State<Home> {
         title: Text('ボトムナビゲーションバーのサンプル'),
       ),
       body: Container(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            title: Text('検索'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera),
+            title: Text('カメラ'),
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('アカウント'),
+            backgroundColor: Colors.blue,
+          ),
+        ]
+      ),
     );
   }
 }
