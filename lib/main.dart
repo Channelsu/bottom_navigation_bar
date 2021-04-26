@@ -23,17 +23,29 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   int _currentIndex = 0;
+
+  final tabs = [
+    Center(child: Text('Home'),),
+    Center(child: Text('検索'),),
+    Center(child: Text('カメラ'),),
+    Center(child: Text('アカウント'),),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('ボトムナビゲーションバーのサンプル'),
       ),
-      body: Container(),
+      body: tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
+        // iconSize: 30,
+        // selectedFontSize: 40,
+        // unselectedFontSize: 10,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
