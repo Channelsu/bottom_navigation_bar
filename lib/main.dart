@@ -23,6 +23,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
       ),
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 1,
+        currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -53,7 +54,12 @@ class _HomeState extends State<Home> {
             title: Text('アカウント'),
             backgroundColor: Colors.blue,
           ),
-        ]
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
       ),
     );
   }
