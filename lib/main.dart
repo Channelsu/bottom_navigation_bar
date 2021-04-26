@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -42,17 +43,17 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             title: Text('検索'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.camera),
             title: Text('カメラ'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             title: Text('アカウント'),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.yellowAccent,
           ),
         ],
         onTap: (index) {
